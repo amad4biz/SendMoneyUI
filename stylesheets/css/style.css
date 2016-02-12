@@ -1,0 +1,247 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333333;
+    background-color: #ffffff;
+}
+main {
+    display: flex;
+    min-height: calc(100vh - 200px);
+    flex-direction: column;
+    align-items: center;
+}
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+h1, h3 {
+     border: 0;
+     padding: 0;
+     margin: 0;
+}
+
+button,
+input[type="button"]{
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #FFFEF3), color-stop(1, #C3C0BB) );
+    background:-moz-linear-gradient( center top, #FFFEF3 5%, #C3C0BB 100% );
+    background-color:#FFFEF3;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #8E8B86;
+    display:inline-block;
+    font-weight:bold;
+    padding:6px 16px;
+    text-decoration:none;
+    cursor:pointer;
+    font-size: 20px;
+}
+
+input[type="email"],
+input[type="number"]{
+    border:0;
+    padding: 0;
+    background-color: inherit;
+    width: 100%;
+}
+
+.button:active {
+    position:relative;
+    top:1px;
+}
+
+.sm-content {
+    width: 500px;
+    height: 700px;
+    border: 2px solid;
+    margin: 10px;
+}
+
+.sm-sub-main {
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+}
+
+.sm-sub-main-footer,
+.sm-sub-main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    background-color: #493117;
+    color: #ffffff;
+}
+
+.sm-sub-main-center {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F3EAE3;
+}
+
+.sm-table-div-overflow {
+    overflow: auto;
+}
+
+.sm-flex-justify-content {
+    justify-content: space-around;
+}
+
+.sm-flex-align-items {
+    align-items: center;
+}
+
+#initialForm button {
+    height: 100px;
+    margin: 0 20px 0 20px;
+}
+
+.sm-table {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sm-table tr:nth-child(odd){
+    background-color:#E4D5C2;
+}
+
+.sm-table tr:nth-child(even) {
+    background-color:#E9D9CA;
+}
+
+.sm-table td{
+    vertical-align:middle;
+    text-align:center;
+    padding:7px;
+    border: 0;
+    margin: 0;
+}
+
+#divTo {
+    display: flex;
+    border-radius:6px;
+    border:1px solid #000000;
+    margin: 0 20px 0 20px;
+    background-color: #ffffff;
+    font-weight:bold;
+    padding: 15px 0 15px 0;
+}
+
+#divTo label{
+    margin: 0 10px 0 20px !important;
+}
+
+#divTo i {
+    padding: 0 15px 0 0;
+    color: green;
+}
+
+#divAmount {
+    display: flex;
+    border-radius:6px;
+    border:1px solid #000000;
+    margin: 0 20px 0 20px;
+    background-color: #ffffff;
+    font-weight:bold;
+    padding: 15px 0 15px 0;
+}
+
+#divAmount label{
+    margin: 0 10px 0 20px !important;
+}
+
+#divAmount select{
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+}
+
+#sendMoneyForm label {
+    margin: 0 20px 0 20px;
+    font-weight:bold;
+}
+
+#sendMoneyForm textarea {
+    border-radius:6px;
+    border:1px solid #000000;
+    margin: 0 20px 0 20px;
+    background-color: #ffffff;
+    padding: 5px 0 10px 20px;
+}
+
+#sendMoneyButtonDiv button{
+    height: 80%;
+    margin: 0 20px 0 20px;
+    width: 40%;
+}
+
+#divReason {
+    display: block;
+    border-radius:6px;
+    border:1px solid #000000;
+    margin: 0 20px 0 20px;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+#divReason ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#divReason ul li{
+    display: flex;
+    list-style-type: none;
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #000000;
+}
+
+#divReason ul li h3{
+    width: 95%;
+}
+
+.lastReason {
+    border: 0px !important;
+}
+
+.selectedReason {
+    color:#D9A97E;
+    font-weight:bold;
+}
+
+.loading-layer {
+    top: 0px;
+    left: 0px;;
+    position: absolute;
+    width: 100%;
+    background-color: #E1EAEC;
+    opacity: .8;
+    z-index: 99;
+    height: 100%;
+    font-size: 5rem;
+}
+.spinner {
+    position: absolute;
+    top: 50%;
+    margin-top: -2.5rem;
+    left: 50%;
+    margin-left: -2.5rem;
+}
+
+#successButtonDiv button{
+    height: 80%;
+    margin: 0 20px 0 20px;
+    width: 40%;
+}
+
+#historyButtonDiv button{
+    height: 80%;
+    margin: 0 20px 0 20px;
+    width: 90%;
+}

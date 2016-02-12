@@ -1,0 +1,51 @@
+<div class="sm-sub-main">
+
+    <h1 class="sm-sub-main-header">Send Money?</h1>
+
+    <form name="sendMoneyForm" id="sendMoneyForm" class="sm-sub-main-center sm-flex-justify-content">
+        <div id="divTo">
+            <label for="to">To: </label>
+            <input type="email" id="to" value="to" name="emailAddress" ng-model="toText" required>
+            <i class="fa fa-check-circle" ng-show="isValid('emailAddress')"></i>
+        </div>
+        <label ng-show="isInvalid('emailAddress')" ng-messages="sendMoneyForm.to.$error">
+            <p ng-message="email"><span style="color: red">Please provide a valid Email Address</span></p>
+        </label>
+
+        <div id="divAmount">
+            <label for="amount">Amount:{{currencySelect.id}} </label>
+            <input type="number" id="amount" value="amount" name="amount" min="0" ng-model="amountText" required>
+
+            <select name="currency" id="currency" ng-model="currencySelect" ng-options="currency.name for currency in currencies"></select>
+            <!--<select name="currency" id="currency" ng-model="currencySelect">-->
+                <!--<option ng-repeat="currency in currencies" value="{{currency.id}}">{{currency.name}}</option>-->
+            <!--</select>-->
+        </div>
+        <label ng-show="isInvalid('amount')" ng-messages="sendMoneyForm.amount.$error">
+            <p ng-message="min"><span style="color: red">Amount should be greater than 0</span></p>
+        </label>
+
+        <!--<label for="message">Message(optional) : </label>-->
+        <!--<input type="text" id="message" value="message" name="message" ng-model="messageText">-->
+        <textarea id="message" value="message" name="message" ng-model="messageText" placeholder="Message(optional)"></textarea>
+
+        <label>What's this payment for?</label>
+
+        <div id="divReason">
+            <ul ng-repeat="reason in reasons" style="list-style-type: none;"  ng-class="{'selectedReason':$index == selectedRow}" ng-click="setClickedRow($index)">
+                <li ng-class="{'lastReason':$last}">
+                    <h3>{{ reason.name }}</h3>
+                    <i class="fa fa-check" ng-show="$index == selectedRow"></i>
+                </li>
+            </ul>
+        </div>
+
+    </form>
+
+    <div id="sendMoneyButtonDiv" class="sm-sub-main-footer">
+        <button type="submit" ng-click="clear()">Clear</button>
+        <button type="submit" ng-disabled="sendMoneyForm.$invalid" ng-click="sendMoney()">Next</button>
+    </div>
+
+
+</div>

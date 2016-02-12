@@ -1,0 +1,11 @@
+{
+  "name": "SendMoneyUI",
+  "version": "1.0.0",
+  "description": "UI to send money",
+  "dependencies": {
+    "angular": "1.4.3",
+    "angular-route": "1.4.3",
+    "font-awesome": "4.4.0"
+  },
+  "private": true
+}

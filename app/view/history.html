@@ -1,0 +1,19 @@
+<div class="sm-sub-main">
+
+    <h1 class="sm-sub-main-header">Transation History</h1>
+
+    <div class="sm-sub-main-center sm-table-div-overflow">
+        <table class="sm-table" >
+            <tr ng-repeat="transaction in transactionDetails">
+                <td>{{ transaction.sentOn }}</td>
+                <td>{{ transaction.sentTo }}</td>
+                <td>{{ transaction.currency}}{{transaction.amount}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="historyButtonDiv" class="sm-sub-main-footer">
+        <button type="submit" ng-click="back()">Back</button>
+    </div>
+
+</div>
