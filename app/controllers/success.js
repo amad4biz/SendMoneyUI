@@ -13,7 +13,7 @@
             console.log("route params :", $routeParams.data);
             $scope.data = JSON.parse($routeParams.data);
 
-
+            $scope.messageSuccess = 'You have sent '+$scope.data.currency.id+$scope.data.amount+' '+$scope.data.currency.name+' to '+$scope.data.to;
 
             $scope.sendMoney = function() {
                 console.log("Send Money clicked");

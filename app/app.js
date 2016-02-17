@@ -2,6 +2,7 @@
     var app = angular.module('sendMoney', [
         "smConfig",
         "ngRoute",
+        "ngSanitize",
         "smLoading",
         "smInitialController",
         "smSendMoneyController",

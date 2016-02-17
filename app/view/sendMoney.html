@@ -13,7 +13,7 @@
         </label>
 
         <div id="divAmount">
-            <label for="amount">Amount:{{currencySelect.id}} </label>
+            <label for="amount">Amount:<span ng-bind-html='currencySelect.id'/></label>
             <input type="number" id="amount" value="amount" name="amount" min="0" ng-model="amountText" required>
 
             <select name="currency" id="currency" ng-model="currencySelect" ng-options="currency.name for currency in currencies"></select>

@@ -52,8 +52,8 @@
 
             $scope.currencies = [
                 {id: '$', name: 'USD'},
-                {id: 'EUR', name: 'EUR'},
-                {id: 'JPY', name: 'JPY'}
+                {id: '&pound;', name: 'EUR'},
+                {id: '&yen;', name: 'JPY'}
             ];
             $scope.currencySelect = $scope.currencies[0];
 

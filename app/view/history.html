@@ -7,7 +7,7 @@
             <tr ng-repeat="transaction in transactionDetails">
                 <td>{{ transaction.sentOn }}</td>
                 <td>{{ transaction.sentTo }}</td>
-                <td>{{ transaction.currency}}{{transaction.amount}}</td>
+                <td ng-bind-html="transaction.amount | currency:transaction.currency.id"></td>
             </tr>
         </table>
     </div>
